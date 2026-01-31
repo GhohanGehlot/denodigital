@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Deno Digital Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Core palette from brand */
+    --background: 20 14% 96%; /* #F6F1F1 */
+    --foreground: 0 0% 0%; /* #000000 */
+
+    --card: 20 14% 96%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 20 14% 96%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 195 79% 45%; /* #19A7CE */
+    --primary-foreground: 20 14% 96%;
+
+    --secondary: 200 44% 33%; /* #146C94 */
+    --secondary-foreground: 20 14% 96%;
+
+    --muted: 200 20% 90%;
+    --muted-foreground: 200 30% 40%;
+
+    --accent: 195 79% 45%;
+    --accent-foreground: 20 14% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 20% 85%;
+    --input: 200 20% 85%;
+    --ring: 195 79% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(195 79% 45%) 0%, hsl(200 44% 33%) 100%);
+    --gradient-text: linear-gradient(90deg, hsl(195 79% 45%) 0%, hsl(200 44% 33%) 100%);
+    --shadow-glow: 0 0 60px hsl(195 79% 45% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.08);
+    --shadow-card-hover: 0 16px 48px hsl(0 0% 0% / 0.12);
+
+    /* Typography */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 20 14% 96%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 20 14% 96%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 20 14% 96%;
+
+    --primary: 195 79% 45%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 200 44% 33%;
+    --secondary-foreground: 20 14% 96%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 195 79% 45%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 195 79% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: var(--gradient-hero);
+  }
+
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
