@@ -149,7 +149,7 @@ const PortfolioSection = () => {
         >
           <p className="text-muted-foreground mb-6">Want to see more or discuss a project?</p>
           <a 
-            href="#contact" 
+            href="https://x.com/ghohangehlot" 
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-primary text-primary font-display font-semibold text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
           >
             Let's Connect
